@@ -5,3 +5,30 @@ AppComponent
 <app-if-render></app-if-render>
 <app-eventos></app-eventos>
 <app-emiter></app-emiter>
+<app-pipes></app-pipes>
+<app-two-way-binding-forms></app-two-way-binding-forms>
+
+<label >Change Course:</label>
+<input type="text" [(ngModel)]="courseName" />
+<p>Course name: {{courseName}} </p>
+
+<h2>Login:</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>User Name:</label>
+  <input
+  type="text"
+  name='username'
+  [(ngModel)]="loginModel.username"
+  autocomplete="off" />
+
+  <br><br>
+
+  <label>Password:</label>
+  <input type="password" name='Password' [(ngModel)]="loginModel.password" />
+
+  <br><br>
+
+  <button type="submit">Login</button>
+
+</form>
+
